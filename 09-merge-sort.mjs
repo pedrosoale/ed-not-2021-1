@@ -62,12 +62,14 @@ function mergeSort(vetor){
 }
 
 comps = 0, divisoes = 0, juncoes = 0
-let nums = [7, 4, 9, 0, 6, 1, 8, 2, 5, 3]
+//let nums = [7, 4, 9, 0, 6, 1, 8, 2, 5, 3]
+
+let nums = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 let numsOrd = mergeSort(nums)
 console.log({numsOrd})
 console.log({comps, divisoes, juncoes})
 
-
+/*
 import { nomes } from './includes/100-mil-nomes.mjs'
 
 comps = 0, divisoes = 0, juncoes = 0
@@ -77,3 +79,4 @@ console.timeEnd('Ordenando nomes...')
 let memoria = process.memoryUsage().heapUsed / 1024 / 1024
 console.log('DEPOIS: ', nomes)
 console.log({comps, divisoes, juncoes, memoria})
+*/

@@ -35,16 +35,17 @@ function bubbleSort(vetor){
 //let nums = [7, 4, 9, 0, 6, 1, 8, 2, 5, 3]
 
 // Pior cenário: vetor em ordem inversa
-// let nums = [9,8,7,6,5,4,3,2,1,0]
+let nums = [9,8,7,6,5,4,3,2,1,0]
 
 // Melhor cenário: vetor já ordenado
 //let nums = [0,1,2,3,4,5,6,7,8,9]
 
-//console.log('Antes: ', nums)
-//bubbleSort(nums)
-//console.log('Depois: ', nums)
-//console.log({totTrocas, pass, comps})
+console.log('Antes: ', nums)
+bubbleSort(nums)
+console.log('Depois: ', nums)
+console.log({totTrocas, pass, comps})
 
+/*
 import { nomes } from './includes/100-mil-nomes.mjs'
 
 console.log('Antes: ', nomes)
@@ -53,3 +54,4 @@ bubbleSort(nomes)
 console.timeEnd('Ordenando nomes...')
 console.log('Depois: ', nomes)
 console.log({totTrocas, pass, comps})
+*/

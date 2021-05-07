@@ -43,7 +43,7 @@ selectionSort(nums)
 console.log(nums)
 console.log({trocas, pass, comps})
 
-
+/*
 import { nomes } from './includes/100-mil-nomes.mjs'
 
 console.time('Ordenando nomes...')
@@ -51,3 +51,4 @@ selectionSort(nomes)
 console.timeEnd('Ordenando nomes...')
 console.log('DEPOIS: ', nomes)
 console.log({trocas, pass, comps})
+*/

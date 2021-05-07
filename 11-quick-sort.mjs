@@ -45,11 +45,13 @@ function quickSort(vetor, ini = 0, fim = vetor.length - 1) {
 }
 
 trocas = 0, comps = 0, pass = 0
-let nums = [7, 4, 9, 0, 6, 2, 8, 5, 3, 1]
+//let nums = [7, 4, 9, 0, 6, 2, 8, 5, 3, 1]
+let nums = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 quickSort(nums)
 console.log(nums)
-console.log(trocas, comps, pass)
+console.log({trocas, pass, comps})
 
+/*
 import { nomes } from './includes/100-mil-nomes.mjs'
 
 trocas = 0, comps = 0, pass = 0
@@ -59,3 +61,4 @@ console.timeEnd('Ordenando nomes...')
 let memoria = process.memoryUsage().heapUsed / 1024 / 1024
 console.log('DEPOIS: ', nomes)
 console.log({trocas, pass, comps, memoria})
+*/
