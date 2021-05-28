@@ -13,3 +13,23 @@
 
     Data de entrega: 31/05, até 20h50, valendo nota de participação
 */
+
+insert(element, index = 0){
+    if(this.isEmpty()) {
+        return super.insert(element, 0)
+    }
+    const pos = this.getIndexNextSortedElement(element)
+    return super.insert(element, pos)
+}
+getIndexNextSortedElement(element){
+    let current = this.head
+    let i = 0
+    for (; i < this.empty && current; i++) {
+        const comp = this.compareFn(element, current.element)
+        if (comp === Compare.LESS_THAN){
+            return i 
+        }
+        current = current.next 
+    }
+    return i
+}
