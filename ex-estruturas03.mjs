@@ -14,22 +14,34 @@
     Data de entrega: 31/05, até 20h50, valendo nota de participação
 */
 
-insert(element, index = 0){
-    if(this.isEmpty()) {
-        return super.insert(element, 0)
+import { LinkedList } from './lib/LinkedList.mjs'
+
+const lista = new LinkedList()
+
+function listaOrd(num) {
+    if(lista.empty) {                               // Verifica se a lista está vazia
+        lista.insertHead(num)                       // Inserir num no início da lista se estiver vazia
     }
-    const pos = this.getIndexNextSortedElement(element)
-    return super.insert(element, pos)
-}
-getIndexNextSortedElement(element){
-    let current = this.head
-    let i = 0
-    for (; i < this.empty && current; i++) {
-        const comp = this.compareFn(element, current.element)
-        if (comp === Compare.LESS_THAN){
-            return i 
+    else {                                          // Se a lista não estiver vazia
+        for(let i = 0; i < lista.count; i++) {      // Percorre a lista
+            let valPos = lista.peek(i)
+            if(valPos > num) {                      // Compara num com os valores nas posições para inserir na lista
+                lista.insert(i, num)
+                return
+            }
         }
-        current = current.next 
+        lista.insertTail(num)   // Insere num no final da lista se não tem valor maior na lista
     }
-    return i
 }
+
+listaOrd(25)
+console.log(lista.print())
+
+listaOrd(14)
+console.log(lista.print())
+
+listaOrd(19)
+console.log(lista.print())
+
+listaOrd(3)
+console.log(lista.print())
